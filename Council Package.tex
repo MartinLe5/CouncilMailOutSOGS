@@ -4,10 +4,12 @@
 \usepackage[english]{babel}
 \usepackage[colorinlistoftodos]{todonotes} % Erase once To-Dos are done
 \usepackage{multicol}
-\usepackage{indentfirst}
+%\usepackage{indentfirst}
+\usepackage{parskip}
 \usepackage{geometry}
 \usepackage{graphicx}
 \setcounter{secnumdepth}{5}
+\usepackage{pdfpages}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -85,12 +87,11 @@ London Ontario Canada\par % Location and year
 \pagestyle{empty} % Removes page numbers 
 
 \titleGP % This command includes the title page
-
 \tableofcontents % This command creates the Table of Contents
 \pagebreak % This Command creates a pagebreak at the end of the ToC
 \pagestyle{plain}
 
-\chapter*{Announcements} 
+%\chapter*{Announcements} 
 
 \chapter*{Orders of the Day}
 
@@ -110,6 +111,5 @@ London Ontario Canada\par % Location and year
 \chapter*{Appendix}
 
 \section{parking}
-\include{Parking_complaint.pdf}
-
+\includepdf[pages={-},pagecommand=\thispagestyle{plain}]{Parking_complaint.pdf}
 \end{document}
